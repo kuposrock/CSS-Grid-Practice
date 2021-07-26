@@ -1,0 +1,127 @@
+.wrapper{
+    margin: 100px auto;
+    width: 40%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    grid-gap: 15px;
+}
+.grid-container > * {
+    height:50px;
+    border-radius: 10px;
+}
+.item1{
+  background-color: red;
+  grid-column: span 2;
+}
+.item2{
+  background-color: blue;
+  grid-column: span 2;
+}
+.item3{
+  background-color: green;
+}
+.item4{
+  background-color: purple;
+  grid-column: span 3;
+}
+.item5{
+  background-color: yellow;
+  grid-column: span 4;
+}
+
+.grid-container2 {
+  display: grid;
+  margin-top: 50px;
+  
+  background-color: white;
+  grid-gap: 15px;
+}
+.grid-container2 > * {
+  min-height: 100px;
+  border-radius: 10px;
+}
+.item6{
+background-color: red;
+grid-column: 1 / span 4;
+}
+.item7{
+background-color: blue;
+grid-column: span 2;
+grid-row: span 2;
+
+}
+.item8{
+background-color: green;
+grid-column: span 2;
+}
+.item9{
+  background-color: purple;
+  }
+
+ .header { grid-area: header; 
+  background-color: grey;}
+ .main { grid-area: main; 
+  background-color: darkgray;}
+ .sidebar1 { grid-area: sidebar1;
+  background-color: darkgrey; }
+ .sidebar2 { grid-area: sidebar2;
+  background-color: lightgray; 
+color:black;}
+ .footer { grid-area: footer;
+  background-color: gray; } 
+
+ .grid-container3 {
+  display:grid;
+
+  color: white;
+  margin-top: 50px;
+  grid-gap: 10px;
+  background-color: white;
+}
+.grid-container3 > * {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+@media (max-width: 599px) {
+  .grid-container3 {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'sidebar1 sidebar1 sidebar1 sidebar1'
+      'main main main main'
+      'main main main main'
+      'sidebar2 sidebar2 sidebar2 sidebar2'
+      'footer footer footer footer';
+  }
+}
+
+@media (min-width: 600px) {
+  .grid-container3 {
+    display: grid;
+    grid-template-areas:
+      'header header header header header'
+      'sidebar1 main main main main'
+      'sidebar1 main main main main'
+      'sidebar2 sidebar2 sidebar2 sidebar2 sidebar2' 
+      'footer footer footer footer footer ';
+  }
+}
+@media(min-width: 992px) {
+  .grid-container3 {
+    display: grid;
+    grid-template-areas:
+    'header header header header header'
+    'sidebar1 main main main sidebar2'
+    'footer footer footer footer footer';
+  }
+
+} 
